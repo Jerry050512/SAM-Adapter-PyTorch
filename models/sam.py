@@ -128,7 +128,7 @@ class SAM(nn.Module):
         )
 
         if 'evp' in encoder_mode['name']:
-            for k, p in self.encoder.named_parameters():
+            for k, p in self.image_encoder.named_parameters():
                 if "prompt" not in k and "mask_decoder" not in k and "prompt_encoder" not in k:
                     p.requires_grad = False
 

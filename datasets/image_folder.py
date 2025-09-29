@@ -70,9 +70,10 @@ class ImageFolder(Dataset):
 
     def img_process(self, file):
         if self.mask:
-            return Image.open(file).convert('L')
+            img = Image.open(file).convert('L')
         else:
-            return Image.open(file).convert('RGB')
+            img = Image.open(file).convert('RGB')
+        return self.img_transform(img)
 
 @register('paired-image-folders')
 class PairedImageFolders(Dataset):
