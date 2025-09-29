@@ -200,9 +200,9 @@ def main():
     parser = argparse.ArgumentParser(description="Train and test the model.")
     parser.add_argument('--mode', type=str, required=True, choices=['train', 'test'], help="Mode: 'train' or 'test'")
     parser.add_argument('--data_root', type=str, default='../datasets/NEU-RSDDS-AUG', help="Dataset root directory")
-    parser.add_argument('--checkpoint_path', type=str, default='./output/checkpoint.pth', help="Path to save/load checkpoint")
-    parser.add_argument('--output_dir', type=str, default='./output', help="Output directory")
-    parser.add_argument('--log_file', type=str, default='./output/result.log', help="Log file path")
+    parser.add_argument('--checkpoint_path', type=str, default='/hy-tmp/output/checkpoint.pth', help="Path to save/load checkpoint")
+    parser.add_argument('--output_dir', type=str, default='/hy-tmp/output', help="Output directory")
+    parser.add_argument('--log_file', type=str, default='/hy-tmp/output/result.log', help="Log file path")
 
     # Hyperparameters from the original project
     parser.add_argument('--batch_size', type=int, default=4, help="Batch size for training")
